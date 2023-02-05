@@ -1,5 +1,5 @@
 const homePagePage = require("../../../support/Pages/HomePage/homePage.Page")
-const registerPage = require("../../../support/Register/register.Page")
+const registerPage = require("../../../support/Pages/Register/register.Page")
 
 describe("CoderByte | Register user", () => {
 
@@ -14,7 +14,6 @@ describe("CoderByte | Register user", () => {
         registerPage.enterEmail("zibeQA@gmail.com")
         registerPage.enterPassword("zibe1233")
         registerPage.get.confirmButton().click()
-        //cy.get('manage-link').should("be.visible")
     })
 
 })
