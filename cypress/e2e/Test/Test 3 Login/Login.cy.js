@@ -1,4 +1,5 @@
 const homePagePage = require("../../../support/Pages/HomePage/homePage.Page")
+const loggedHomePage = require("../../../support/Pages/LoggedHomePage/loggedHome.Page")
 const loginPage = require("../../../support/Pages/Login/login.Page")
 const registerPage = require("../../../support/Pages/Register/register.Page")
 
@@ -50,7 +51,7 @@ describe("CoderByte | HomePage", () => {
         loginPage.assert.errorLogin()
     })
 
-    it.only('TC6 : Assert successfully login', () => {
+    it('TC6 : Assert successfully login', () => {
         homePagePage.dashboard.login().click()
         registerPage.element.login().click()
         loginPage.testCaseRandomInput()

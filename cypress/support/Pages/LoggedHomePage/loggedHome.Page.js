@@ -1,9 +1,10 @@
-class homePage {
+class loggedHomePage {
 
     dashboard = {
-        login:           () =>              cy.get('.menu-item > a'),
-        organizations:   () =>              cy.get('.employers > [href="/organizations?utm_campaign=NewHomepage"]'),
-        assessment:      () =>              cy.get('a[href="/organizations#assessmentsSection"]'),
+        profile:         () =>              cy.get('a.manage-link'),
+        setting:         () =>              cy.get('a[href="/settings"]'),
+        logout:          () =>              cy.get('a[href="/logout"]'),
+
         interviews:      () =>              cy.get('a[href="/organizations#interviewsSection"]'),
         pricing:         () =>              cy.get('a[href="/organizations#pricing"]'),
 
@@ -18,4 +19,4 @@ class homePage {
 
 }
 
-module.exports = new homePage()
+module.exports = new loggedHomePage()
